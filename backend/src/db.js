@@ -110,8 +110,15 @@ function initDb() {
 }
 
 function seedData() {
-  const count = db.prepare('SELECT COUNT(*) as c FROM courts').get().c;
-  if (count > 0) return;
+  const courtCount = db.prepare('SELECT COUNT(*) as c FROM courts').get().c;
+  const caseCount = db.prepare('SELECT COUNT(*) as c FROM cases').get().c;
+  // If we have courts but old/few cases, wipe and reseed
+  if (courtCount > 0 && caseCount < 20) {
+    console.log('🔄 Reseeding — old data found, refreshing with full case set');
+    db.exec('DELETE FROM documents; DELETE FROM hearings; DELETE FROM cases; DELETE FROM audit_log; DELETE FROM users; DELETE FROM courts;');
+  } else if (courtCount > 0) {
+    return;
+  }
 
   const courts = [
     // Kingston & St. Andrew
