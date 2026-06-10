@@ -22,6 +22,8 @@ app.use('/api/courts', require('./routes/courts'));
 app.use('/api/cases', require('./routes/cases'));
 app.use('/api/hearings', require('./routes/hearings'));
 app.use('/api/documents', require('./routes/documents'));
+app.use('/api/users', require('./routes/users'));
+app.use('/api/reports', require('./routes/reports'));
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok', service: 'CourtJM', version: '1.0.0' }));
 

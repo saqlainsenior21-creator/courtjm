@@ -9,6 +9,8 @@ import Documents from './pages/Documents';
 import MOJDashboard from './pages/MOJDashboard';
 import PublicSearch from './pages/PublicSearch';
 import Partner from './pages/Partner';
+import Staff from './pages/Staff';
+import Reports from './pages/Reports';
 import Layout from './components/Layout';
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
@@ -28,6 +30,8 @@ export default function App() {
         <Route path="/cases/:id" element={<PrivateRoute><Layout><CaseDetail /></Layout></PrivateRoute>} />
         <Route path="/hearings" element={<PrivateRoute><Layout><Hearings /></Layout></PrivateRoute>} />
         <Route path="/documents" element={<PrivateRoute><Layout><Documents /></Layout></PrivateRoute>} />
+        <Route path="/reports" element={<PrivateRoute><Layout><Reports /></Layout></PrivateRoute>} />
+        <Route path="/staff" element={<PrivateRoute><Layout><Staff /></Layout></PrivateRoute>} />
         <Route path="/moj" element={<PrivateRoute><Layout><MOJDashboard /></Layout></PrivateRoute>} />
       </Routes>
     </BrowserRouter>

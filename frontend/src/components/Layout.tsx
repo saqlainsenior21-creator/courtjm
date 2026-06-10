@@ -1,11 +1,13 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { LayoutDashboard, FolderOpen, Calendar, FileText, Users, Scale, LogOut, Globe, Handshake } from 'lucide-react';
+import { LayoutDashboard, FolderOpen, Calendar, FileText, Users, Scale, LogOut, Globe, Handshake, BarChart3 } from 'lucide-react';
 
 const nav = [
   { path: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { path: '/cases', label: 'Cases', icon: FolderOpen },
   { path: '/hearings', label: 'Hearings', icon: Calendar },
   { path: '/documents', label: 'E-Filing', icon: FileText },
+  { path: '/reports', label: 'Reports & Export', icon: BarChart3 },
+  { path: '/staff', label: 'Staff', icon: Users },
   { path: '/moj', label: 'MOJ Overview', icon: Globe },
 ];
 
