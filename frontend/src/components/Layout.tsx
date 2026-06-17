@@ -28,10 +28,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <aside style={{ width: 240, background: '#1B3A6B', color: 'white', display: 'flex', flexDirection: 'column', position: 'fixed', top: 0, left: 0, height: '100vh', zIndex: 100 }}>
         <div style={{ padding: '1.5rem 1.25rem', borderBottom: '1px solid rgba(255,255,255,0.15)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-            <Scale size={24} color="#FFB81C" />
+            <img src="/icon.svg" alt="" width={32} height={32} />
             <div>
-              <div style={{ fontWeight: 700, fontSize: '1rem' }}>CourtJM</div>
-              <div style={{ fontSize: '0.72rem', opacity: 0.75 }}>Ministry of Justice</div>
+              <div style={{ fontWeight: 800, fontSize: '0.98rem', letterSpacing: 0.3 }}>CourtJM</div>
+              <div style={{ fontSize: '0.65rem', opacity: 0.7, letterSpacing: 1.2, textTransform: 'uppercase' }}>Ministry of Justice</div>
             </div>
           </div>
         </div>
